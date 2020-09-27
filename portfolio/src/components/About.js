@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import { makeStyles, StylesProvider } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import LinksSection from "./LinksSection";
 import Profile from "../assets/ProfilePic.jpg";
+import refContext from "../context/refContext";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,17 +12,31 @@ const useStyles = makeStyles((theme) => ({
   },
   grid: {
     height: "100vh",
-    marginLeft: theme.spacing(10),
+    paddingLeft: theme.spacing(10),
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: theme.spacing(15),
+      paddingRight: theme.spacing(2),
+    },
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2),
+    },
   },
   Box: {
     padding: theme.spacing(1),
     color: theme.palette.text.secondary,
     fontSize: 25,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 25,
+    },
   },
   introText: {
     color: "#000000",
     fontSize: 40,
     fontWeight: "bold",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 30,
+    },
   },
   button: {
     margin: theme.spacing(1),
@@ -32,20 +47,29 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     height: "100%",
   },
+  photoItem: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
 }));
 
 export default function About() {
   const classes = useStyles();
-
+  const { updateMap } = useContext(refContext);
+  const rootEl = useRef(null);
+  useEffect(() => {
+    updateMap("AboutSection", rootEl);
+  });
   return (
-    <div className={classes.root}>
+    <div className={classes.root} ref={rootEl}>
       <Grid
         container
         spacing={3}
         className={classes.grid}
         alignContent="center"
       >
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={12} md={7}>
           <Box className={classes.center}>
             <Box className={classes.Box}>
               <Box className={classes.introText}>Hello,</Box>
@@ -58,12 +82,12 @@ export default function About() {
             <LinksSection />
           </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={12} md={5} className={classes.photoItem}>
           <Box className={classes.box + classes.center}>
             <img
               src={Profile}
               alt="My Photo"
-              height="500"
+              height="380"
               style={{ borderRadius: 50 }}
             />
           </Box>

@@ -9,21 +9,24 @@ import { ThemeProvider } from "@material-ui/styles";
 import theme from "./styles/theme";
 import Divider from "@material-ui/core/Divider/Divider";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import RefProvider from "./context/RefProvider";
 
 function App() {
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Navbar />
-        <About />
-        <Divider />
-        <ProjectList />
-        <SkillsSection />
-        <ContactMeSection />
-        <Footer />
-      </ThemeProvider>
-    </div>
+    <React.Fragment>
+      <RefProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Navbar />
+          <About />
+          <Divider />
+          <ProjectList />
+          <SkillsSection />
+          <ContactMeSection />
+          <Footer />
+        </ThemeProvider>
+      </RefProvider>
+    </React.Fragment>
   );
 }
 

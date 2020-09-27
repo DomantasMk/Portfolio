@@ -13,6 +13,7 @@ const Footer = () => {
       }}
     >
       <LinksSection />
+
       <Box style={{ margin: "2rem" }}>
         © Domantas Mikelionis 2020. All rights reserved.
       </Box>

@@ -9,9 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     margin: theme.spacing(3),
   },
-  grid: {
-    minHeight: "25vh",
-  },
+  grid: {},
   Box: {
     padding: theme.spacing(2),
     paddingLeft: theme.spacing(5),
@@ -24,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     color: theme.palette.text.secondary,
     marginBottom: theme.spacing(5),
-    height: "80%",
   },
   title: {
     color: "#000000",
@@ -34,6 +31,14 @@ const useStyles = makeStyles((theme) => ({
   paragraph: {},
   button: {
     margin: theme.spacing(1),
+  },
+  image: {
+    marginRight: "0.5rem",
+    width: "auto",
+    height: "auto",
+    maxWidth: "100%",
+    maxHeight: "600px",
+    objectFit: "scale-down",
   },
 }));
 
@@ -63,8 +68,8 @@ export default function Project({ projectInfo }) {
                   src={image}
                   alt="ProjectImage"
                   key={image}
-                  height="100%"
-                  style={{ marginRight: "0.5rem" }}
+                  width={`${100 / projectInfo.images.length}%`}
+                  className={classes.image}
                 />
               ))}
             </Box>

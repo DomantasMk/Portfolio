@@ -8,7 +8,7 @@ import HandBookAndroid from "../HandBookAndroid.gif";
 
 export default [
   {
-    key: "1",
+    key: "11",
     title: "LT Job Statistics",
     description:
       "This website was made to research the trends of technologies/tools mentioned in IT job adverts. You can see generated charts from data we gathered, the default charts are of top 10 technologies in the database, but there is a filter if you want to view different data, feel free to check out 😎.",
@@ -25,7 +25,7 @@ export default [
     liveLink: "https://ltitjobstatistics.herokuapp.com/",
   },
   {
-    key: "2",
+    key: "22",
     title: "TimeBoxIt",
     description:
       "Personal Project similar to google calendar with the goal of planning your own schedule on a calendar. In case you try it out and dont want to bother registering you can check it out with a test account: Email: test@test.com password: test",
@@ -44,7 +44,7 @@ export default [
     liveLink: "https://timeboxapp.herokuapp.com/",
   },
   {
-    key: "3",
+    key: "33",
     title: "ReflixApp",
     description:
       "A basic application for browsing/searching/saving movies and saving them to your personal library.",
@@ -60,7 +60,7 @@ export default [
     codeRepoLink: "https://github.com/DomantasMk/ReflixApp",
   },
   {
-    key: "4",
+    key: "45",
     title: "Hand book app",
     description:
       "Our application is a survival guide for students in Brno, mainly targeted at incoming foreign students to collect and present all the necessary information a new student would need to thrive. There is a lot of information the first few weeks and a lot of things to remember. Our application would solve the problem of information overload and different information sources, gathering it in one application, available offline after the initial download.",
