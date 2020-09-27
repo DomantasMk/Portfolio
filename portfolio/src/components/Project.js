@@ -34,11 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     marginRight: "0.5rem",
-    width: "auto",
-    height: "auto",
-    maxWidth: "100%",
-    maxHeight: "600px",
-    objectFit: "scale-down",
+    maxHeight: "75vh",
   },
 }));
 

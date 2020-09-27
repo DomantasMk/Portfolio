@@ -48,9 +48,16 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
   },
   photoItem: {
+    height: 380,
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
+    [theme.breakpoints.up("lg")]: {
+      height: 500,
+    },
+  },
+  [theme.breakpoints.up("xl")]: {
+    height: 700,
   },
 }));
 
@@ -78,16 +85,24 @@ export default function About() {
               <Box className={classes.introText}>I'm Domantas Mikelionis</Box>
             </Box>
             <Box className={classes.Box}>Fullstack Web developer</Box>
-            <Box></Box>
-            <LinksSection />
+            <Box
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                width: "100%",
+              }}
+            >
+              <LinksSection />
+            </Box>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={12} md={5} className={classes.photoItem}>
-          <Box className={classes.box + classes.center}>
+        <Grid item xs={12} sm={12} md={5}>
+          <Box className={classes.photoItem}>
             <img
               src={Profile}
               alt="My Photo"
-              height="380"
+              height="100%"
               style={{ borderRadius: 50 }}
             />
           </Box>

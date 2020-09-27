@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     margin: "3rem",
     fontSize: 20,
+    [theme.breakpoints.down("xs")]: {
+      margin: "1rem",
+    },
   },
   center: {
     textAlign: "center",
