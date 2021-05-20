@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "32096819e6cebf3135acd9eef9be3816",
+    "revision": "89179208b2b01e74d7051f9c5222f22e",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "b47dfdb6c55286af0c82",
+    "revision": "972ddc28829242f83bd1",
     "url": "/Portfolio/static/css/main.92155083.chunk.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/js/2.c48ab5b1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b47dfdb6c55286af0c82",
-    "url": "/Portfolio/static/js/main.48e7ca19.chunk.js"
+    "revision": "972ddc28829242f83bd1",
+    "url": "/Portfolio/static/js/main.c93c1835.chunk.js"
   },
   {
     "revision": "b83a37198ba343383876",
     "url": "/Portfolio/static/js/runtime-main.e440ee5a.js"
   },
   {
-    "revision": "bb50013e2c2abd338e96d57e7625ab70",
-    "url": "/Portfolio/static/media/Domantas_Mikelionis_CV.bb50013e.pdf"
+    "revision": "ae2b8bc755249f90af641aba457e9fbf",
+    "url": "/Portfolio/static/media/Domantas_Mikelionis_CV.ae2b8bc7.pdf"
   },
   {
     "revision": "2e38882fa09b0ceae72c577a21272127",
